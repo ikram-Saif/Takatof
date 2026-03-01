@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Materials - Takatof Initiative</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-900 font-sans leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 3.333 1.428a1 1 0 00.788 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-slate-800 tracking-tight">Takatof <span
+                            class="text-brand-600">Initiative</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="index.html" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="materials.html" class="text-brand-600 font-bold border-b-2 border-brand-600">Materials</a>
+                    <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Available Materials</h1>
+                <p class="text-slate-600 max-w-2xl mx-auto">Browse through recently added textbooks, notes, and study
+                    tools donated by your peers.</p>
+            </div>
+
+            <div class="mb-8 flex flex-col md:flex-row gap-4 items-end">
+                <div class="flex-1 w-full">
+                    <label for="tableSearch" class="block text-sm font-semibold text-slate-700 mb-2">Search
+                        Materials</label>
+                    <div class="relative">
+                        <input type="text" id="tableSearch" placeholder="Search by name, donor, or subject..."
+                            class="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="w-full md:w-48">
+                    <label for="categoryFilter" class="block text-sm font-semibold text-slate-700 mb-2">Filter by
+                        Type</label>
+                    <select id="categoryFilter"
+                        class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all appearance-none cursor-pointer">
+                        <option value="all">All Types</option>
+                        <option value="Book">Book</option>
+                        <option value="Notes">Notes</option>
+                        <option value="Tools">Tools</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="tableWrapper"
+                class="overflow-hidden bg-white rounded-3xl shadow-xl shadow-slate-200 border border-slate-100">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse" id="materialsTable">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-100">
+                                <th class="px-6 py-5 text-sm font-bold text-slate-500 uppercase tracking-wider cursor-pointer hover:text-brand-600 transition-colors group"
+                                    onclick="setSort(0)">
+                                    <div class="flex items-center gap-1">
+                                        Type
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-6 py-5 text-sm font-bold text-slate-500 uppercase tracking-wider cursor-pointer hover:text-brand-600 transition-colors group"
+                                    onclick="setSort(1)">
+                                    <div class="flex items-center gap-1">
+                                        Book / Subject Name
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                        </svg>
+                                    </div>
+                                </th>
+                                <th class="px-6 py-5 text-sm font-bold text-slate-500 uppercase tracking-wider">
+                                    Condition</th>
+                                <th class="px-6 py-5 text-sm font-bold text-slate-500 uppercase tracking-wider">Donor
+                                </th>
+                                <th class="px-6 py-5 text-sm font-bold text-slate-500 uppercase tracking-wider">Contact
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100" id="tableBody">
+                            <!-- Rows inserted by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination footer -->
+                <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+                    <div class="text-sm text-slate-500">
+                        Showing <span id="startIndex" class="font-semibold text-slate-900">0</span> to <span
+                            id="endIndex" class="font-semibold text-slate-900">0</span> of <span id="totalItems"
+                            class="font-semibold text-slate-900">0</span> items
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="prevBtn"
+                            class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-white transition-all disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                        <button id="nextBtn"
+                            class="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium hover:bg-white transition-all disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden py-24 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-slate-300 mx-auto mb-4" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 class="text-xl font-bold text-slate-900 mb-1">No materials found</h3>
+                <p class="text-slate-500">Try adjusting your search or filters.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 pt-16 pb-8 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-2xl font-bold tracking-tight mb-4 inline-block">Takatof <span
+                    class="text-brand-500">Initiative</span></span>
+            <p class="text-slate-400 mb-8">&copy; 2026 Takatof Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data and Pagination Logic
+        const allData = [
+            { type: 'Book', name: 'Advanced Calculus (10th Ed)', condition: 'Used - Good', donor: 'Ahmed Mansour', contact: 'ahmed@example.com' },
+            { type: 'Notes', name: 'Organic Chemistry II Summary', condition: 'Hand-written', donor: 'Sara Williams', contact: 'sara@example.com' },
+            { type: 'Tools', name: 'Scientific Calculator TI-84', condition: 'New', donor: 'Kevin Lee', contact: 'kevin@example.com' },
+            { type: 'Other', name: 'Drafting Kit', condition: 'Used - Like New', donor: 'Layla Omar', contact: 'layla@example.com' },
+            { type: 'Book', name: 'Physics Basics', condition: 'Used', donor: 'John Miller', contact: 'john@example.com' },
+            { type: 'Notes', name: 'History 201 Midterm Prep', condition: 'Digital', donor: 'Alice Cooper', contact: 'alice@example.com' },
+            { type: 'Book', name: 'Economics for Beginners', condition: 'New', donor: 'Bob Marley', contact: 'bob@example.com' }
+        ];
+
+        let filteredData = [...allData];
+        let currentPage = 1;
+        const itemsPerPage = 5;
+        let sortCol = -1;
+        let sortDir = 1;
+
+        const tableBody = document.getElementById('tableBody');
+        const searchInput = document.getElementById('tableSearch');
+        const filterSelect = document.getElementById('categoryFilter');
+        const emptyState = document.getElementById('emptyState');
+        const tableWrapper = document.getElementById('tableWrapper');
+
+        function render() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const split = filteredData.slice(start, end);
+
+            tableBody.innerHTML = '';
+            if (filteredData.length === 0) {
+                emptyState.classList.remove('hidden');
+                tableWrapper.classList.add('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            tableWrapper.classList.remove('hidden');
+
+            split.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-brand-50/30 transition-colors';
+                const badge = item.type === 'Book' ? 'bg-blue-100 text-blue-700' :
+                    item.type === 'Notes' ? 'bg-emerald-100 text-emerald-700' :
+                        item.type === 'Tools' ? 'bg-purple-100 text-purple-700' : 'bg-amber-100 text-amber-700';
+
+                tr.innerHTML = `
+                    <td class="px-6 py-5"><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${badge}">${item.type}</span></td>
+                    <td class="px-6 py-5 font-semibold text-slate-800">${item.name}</td>
+                    <td class="px-6 py-5 text-slate-600">${item.condition}</td>
+                    <td class="px-6 py-5 text-slate-600">${item.donor}</td>
+                    <td class="px-6 py-5"><a href="mailto:${item.contact}" class="text-brand-600 hover:underline font-medium">${item.contact}</a></td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            document.getElementById('startIndex').textContent = filteredData.length > 0 ? start + 1 : 0;
+            document.getElementById('endIndex').textContent = Math.min(end, filteredData.length);
+            document.getElementById('totalItems').textContent = filteredData.length;
+
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage >= Math.ceil(filteredData.length / itemsPerPage);
+        }
+
+        function update() {
+            const term = searchInput.value.toLowerCase();
+            const cat = filterSelect.value;
+
+            filteredData = allData.filter(i => {
+                const s = i.name.toLowerCase().includes(term) || i.donor.toLowerCase().includes(term);
+                const c = cat === 'all' || i.type === cat;
+                return s && c;
+            });
+
+            if (sortCol >= 0) {
+                const keys = ['type', 'name', 'condition', 'donor'];
+                const key = keys[sortCol];
+                filteredData.sort((a, b) => a[key].localeCompare(b[key]) * sortDir);
+            }
+
+            currentPage = 1;
+            render();
+        }
+
+        function setSort(i) {
+            if (sortCol === i) sortDir *= -1;
+            else { sortCol = i; sortDir = 1; }
+            update();
+        }
+
+        searchInput.addEventListener('input', update);
+        filterSelect.addEventListener('change', update);
+        document.getElementById('prevBtn').onclick = () => { if (currentPage > 1) { currentPage--; render(); } };
+        document.getElementById('nextBtn').onclick = () => { if (currentPage < Math.ceil(filteredData.length / itemsPerPage)) { currentPage++; render(); } };
+
+        render();
+    </script>
+
+</body>
+
+</html>
