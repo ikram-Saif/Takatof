@@ -1,111 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Takatof Initiative - Academic Support & Solidarity</title>
+    <title>مبادرة تكاتف - الدعم الأكاديمي والتضامن</title>
     <meta name="description"
-        content="Takatof Initiative: A student-led platform for exchanging and reusing textbooks and study materials. Promoting academic solidarity.">
-    <!-- Google Fonts: Inter -->
+        content="مبادرة تكاتف: منصة يقودها الطلاب لتبادل وإعادة استخدام الكتب المدرسية والمواد الدراسية. تعزيز التضامن الأكاديمي.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Tajawal', 'Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+                            400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+                            800: '#075985', 900: '#0c4a6e',
                         },
                         accent: {
-                            50: '#f0fdf4',
-                            500: '#22c55e',
-                            600: '#16a34a',
+                            50: '#f0fdf4', 500: '#22c55e', 600: '#16a34a',
                         }
                     }
                 }
             }
         }
     </script>
-    <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
 
-        .hero-pattern {
-            background-color: #f0f9ff;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h-9V15h9v-1h-9V5h9V4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-5v1h5v9h-9V5h9V4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-9V0h-1v4h-5v1h5v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v9H0v1h15v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h9v4h1v-4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-4v-1h4v-9h-9V0h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h1v-1h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h9v-1h-9v-9h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9h9v1h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 text-slate-900 font-sans leading-relaxed overflow-x-hidden">
+<body class="bg-gray-50 text-slate-800 font-sans leading-[1.8] overflow-x-hidden text-[17px]">
 
     <!-- Header / Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-sm">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass shadow-sm" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path
-                                d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 3.333 1.428a1 1 0 00.788 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z" />
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-brand-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-200 transition-transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
-                    <span class="text-xl font-bold text-slate-800 tracking-tight">Takatof <span
-                            class="text-brand-600">Initiative</span></span>
+                    <span class="text-xl font-extrabold text-slate-800 tracking-tight">مبادرة <span class="text-brand-600">تكاتف</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link active">الرئيسية</a>
+                    <a href="materials.html" class="nav-link">المواد المتاحة</a>
+                    <a href="contact.html" class="nav-link">تواصل معنا</a>
+                    <a href="materials.html?openModal=add" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white bg-brand-600 rounded-xl hover:bg-brand-700 transition-all shadow-md hover:shadow-lg active:scale-95">
+                        تبرع الآن
+                    </a>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                    <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
-                    <a href="#process" class="hover:text-brand-600 transition-colors">Process</a>
-                    <a href="#donate" class="hover:text-brand-600 transition-colors">Donate</a>
-                    <a href="materials.html" class="hover:text-brand-600 transition-colors">Materials</a>
-                    <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
-                </div>
+
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <!-- Mobile Menu Button (Icon only, functionality mocked) -->
-                    <button class="text-slate-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
+                    <button type="button" class="text-slate-600 p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -113,59 +81,111 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/50"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center max-w-3xl mx-auto">
+    <main>
+        <!-- Hero Section -->
+        <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/50"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
                 <div
-                    class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-100 text-brand-700 mb-6 border border-brand-200 shadow-sm transition-all hover:bg-brand-200">
-                    Empowering students through solidarity
+                    class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase bg-brand-100 text-brand-700 mb-6 border border-brand-200 shadow-sm">
+                    تمكين الطلاب من خلال التضامن الأكاديمي
                 </div>
                 <h1
-                    class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-8">
-                    Knowledge is Meant to be <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">Shared</span>
+                    class="text-4xl sm:text-5xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-8 max-w-4xl mx-auto">
+                    المعرفة وُجدت ليكـون <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">تبادلهـا</span>
+                    ممكناً
                 </h1>
-                <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                    Takatof Initiative connects students to reuse textbooks, notes, and study tools. Save money, help
-                    your peers, and build a more sustainable academic community.
+                <p class="text-lg text-slate-600 font-medium leading-relaxed mb-10 max-w-2xl mx-auto">
+                    مبادرة تكاتف تربط الطلاب ببعضهم لإعادة استخدام الكتب الدراسية والملخصات والأدوات. وفّر مالك، ساعد
+                    زملاءك، وساهم في بناء مجتمع أكاديمي أكثر استدامة.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#donate"
-                        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-brand-600 rounded-xl shadow-lg shadow-brand-200 hover:bg-brand-700 hover:shadow-xl transition-all active:scale-95 group">
-                        Register as a Donor
+                    <a href="materials.html?openModal=add"
+                        class="inline-flex items-center justify-center px-8 py-4 text-base font-black text-white bg-brand-600 rounded-xl shadow-lg shadow-brand-200 hover:bg-brand-700 hover:shadow-xl transition-all active:scale-95 group">
+                        تبرع الآن
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20"
+                            class="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20"
                             fill="currentColor">
                             <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
                     <a href="materials.html"
-                        class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition-all active:scale-95">
-                        View Available Materials
+                        class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition-all active:scale-95">
+                        عرض المواد المتاحة
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Decoration elements -->
-        <div class="absolute -top-24 -left-20 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl opacity-20 animate-float">
-        </div>
-        <div class="absolute top-1/2 -right-20 w-80 h-80 bg-accent-200/30 rounded-full blur-3xl opacity-20 animate-float"
-            style="animation-delay: 2s"></div>
-    </header>
+            <!-- Background Decorations -->
+            <div class="absolute -top-24 -left-20 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl opacity-20 animate-float"
+                aria-hidden="true"></div>
+            <div class="absolute top-1/2 -right-20 w-80 h-80 bg-accent-200/30 rounded-full blur-3xl opacity-20 animate-float"
+                style="animation-delay: 2s" aria-hidden="true"></div>
+        </header>
 
-    <main>
+        <!-- Statistics Section -->
+        <section class="py-12 bg-white relative z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Visitors -->
+                    <article
+                        class="glass p-8 rounded-3xl text-center border-brand-100 shadow-xl shadow-brand-50/50 group hover:-translate-y-1 transition-all">
+                        <div
+                            class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 mx-auto group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <p class="text-4xl font-extrabold text-slate-900 mb-2 counter" data-target="12540">0</p>
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">إجمالي الزوار</h3>
+                    </article>
+
+                    <!-- Donors -->
+                    <article
+                        class="glass p-8 rounded-3xl text-center border-brand-100 shadow-xl shadow-brand-50/50 group hover:-translate-y-1 transition-all">
+                        <div
+                            class="w-14 h-14 bg-accent-50 rounded-2xl flex items-center justify-center text-accent-600 mb-6 mx-auto group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <p class="text-4xl font-extrabold text-slate-900 mb-2 counter" data-target="860">0</p>
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">متبرع نشط</h3>
+                    </article>
+
+                    <!-- Beneficiaries -->
+                    <article
+                        class="glass p-8 rounded-3xl text-center border-brand-100 shadow-xl shadow-brand-50/50 group hover:-translate-y-1 transition-all">
+                        <div
+                            class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 mx-auto group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <p class="text-4xl font-extrabold text-slate-900 mb-2 counter" data-target="4200">0</p>
+                        <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider">طالب مستفيد</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section id="about" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                     <div class="mb-12 lg:mb-0 relative">
                         <div class="aspect-video rounded-3xl overflow-hidden bg-slate-100 shadow-2xl relative z-10">
-                            <!-- Placeholder for an image or graphic -->
                             <div
                                 class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-50 to-brand-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-brand-300" fill="none"
@@ -175,27 +195,23 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-accent-50 rounded-full -z-0"></div>
-                        <div class="absolute -top-6 -left-6 w-32 h-32 border-4 border-brand-100 rounded-2xl -z-0"></div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-accent-50 rounded-full" aria-hidden="true">
+                        </div>
+                        <div class="absolute -top-6 -left-6 w-32 h-32 border-4 border-brand-100 rounded-2xl"
+                            aria-hidden="true"></div>
                     </div>
                     <div>
-                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">About Takatof
-                            Initiative</h2>
-                        <div class="space-y-4 text-slate-600">
-                            <p>
-                                Takatof Initiative is built on the core values of academic support and solidarity. We
-                                believe that financial barriers should never hinder a student's pursuit of knowledge.
-                            </p>
-                            <p>
-                                Our goal is to create a seamless ecosystem where students can donate their used
-                                textbooks, lecture notes, and study tools to those who need them most. This cycle of
-                                sharing not only helps students save money but also fosters a culture of cooperation and
-                                mutual aid.
-                            </p>
+                        <h2
+                            class="text-3xl sm:text-4xl font-black text-slate-900 mb-6 border-r-4 border-brand-600 pr-6">
+                            عن مبادرة تكاتف</h2>
+                        <div class="space-y-4 text-slate-600 font-medium">
+                            <p>تأسست مبادرة "تكاتف" بناءً على القيم الجوهرية للدعم الأكاديمي والتضامن. نحن نؤمن بأن
+                                العوائق المادية يجب ألا تعيق أبدًا سعي الطالب وراء المعرفة.</p>
+                            <p>هدفنا هو إنشاء نظام سلس حيث يمكن للطلاب التبرع بالكتب المدرسية المستعملة، ومذكرات
+                                المحاضرات، وأدوات الدراسة لأولئك الذين هم في أمس الحاجة إليها.</p>
                         </div>
-
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div
+                            <article
                                 class="p-5 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand-200 transition-colors">
                                 <div
                                     class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 mb-4">
@@ -205,11 +221,11 @@
                                             d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
                                 </div>
-                                <h3 class="font-bold text-slate-800 mb-2">Main Goals</h3>
-                                <p class="text-sm text-slate-500">Reducing education costs and ensuring material
-                                    availability for everyone.</p>
-                            </div>
-                            <div
+                                <h3 class="font-bold text-slate-800 mb-2">أهدافنا الرئيسية</h3>
+                                <p class="text-sm text-slate-500">تقليل تكاليف التعليم وضمان توفر المواد الدراسية
+                                    للجميع.</p>
+                            </article>
+                            <article
                                 class="p-5 bg-gray-50 rounded-2xl border border-gray-100 hover:border-brand-200 transition-colors">
                                 <div
                                     class="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center text-accent-600 mb-4">
@@ -219,168 +235,270 @@
                                             d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                     </svg>
                                 </div>
-                                <h3 class="font-bold text-slate-800 mb-2">Target Audience</h3>
-                                <p class="text-sm text-slate-500">Freshmen and students in need of specific academic
-                                    resources.</p>
-                            </div>
+                                <h3 class="font-bold text-slate-800 mb-2">الفئة المستهدفة</h3>
+                                <p class="text-sm text-slate-500">الطلاب المستجدين والطلاب الذين يحتاجون لمواد أكاديمية
+                                    محددة.</p>
+                            </article>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section id="process" class="py-24 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">How It Works</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">Follow these simple steps to either donate or receive
-                        academic materials.</p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                    <!-- Step 1 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div
-                            class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-2xl font-bold text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                            1</div>
-                        <h3 class="font-bold text-slate-800 mb-3">Register</h3>
-                        <p class="text-sm text-slate-500">Donors fill out the simple registration form below with
-                            material details.</p>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div
-                            class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-2xl font-bold text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                            2</div>
-                        <h3 class="font-bold text-slate-800 mb-3">Confirm</h3>
-                        <p class="text-sm text-slate-500">A confirmation email is sent with a summary and a link to edit
-                            your listing.</p>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div
-                            class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-2xl font-bold text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                            3</div>
-                        <h3 class="font-bold text-slate-800 mb-3">Connect</h3>
-                        <p class="text-sm text-slate-500">Beneficiaries contact donors directly using the provided
-                            information.</p>
-                    </div>
-                    <!-- Step 4 -->
-                    <div class="flex flex-col items-center text-center group">
-                        <div
-                            class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-2xl font-bold text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                            4</div>
-                        <h3 class="font-bold text-slate-800 mb-3">Complete</h3>
-                        <p class="text-sm text-slate-500">After hand-over, donors edit their response to remove
-                            delivered items.</p>
-                    </div>
-
-                    <!-- Connector line (hidden on mobile) -->
-                    <div class="hidden lg:block absolute top-8 left-[15%] right-[15%] h-0.5 bg-slate-200 -z-0"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Donation Form Section -->
-        <section id="donate" class="py-24 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Feedback CTA Section -->
+        <section id="feedback" class="py-24 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div
-                    class="bg-white rounded-[2rem] shadow-2xl shadow-slate-200 border border-slate-100 overflow-hidden">
-                    <div class="bg-brand-600 p-8 sm:p-12 text-center text-white">
-                        <h2 class="text-3xl font-bold mb-4">Donation Form</h2>
-                        <p class="text-brand-100">Help a fellow student by sharing your academic resources.</p>
-                    </div>
-                    <form class="p-8 sm:p-12 space-y-6"
-                        onsubmit="event.preventDefault(); alert('Thank you for your generousity! (Mock Submission)');">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Full
-                                    Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Email
-                                    Address</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone
-                                    Number</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all">
-                            </div>
-                            <div>
-                                <label for="type" class="block text-sm font-semibold text-slate-700 mb-2">Type of
-                                    Material</label>
-                                <select id="type" name="type" required
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all appearance-none cursor-pointer">
-                                    <option value="" disabled selected>Select type</option>
-                                    <option value="book">Book</option>
-                                    <option value="notes">Notes</option>
-                                    <option value="tools">Study Tools</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="subject" class="block text-sm font-semibold text-slate-700 mb-2">Subject or
-                                    Book Name</label>
-                                <input type="text" id="subject" name="subject" required placeholder="Calculus I"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all">
-                            </div>
-                            <div>
-                                <label for="condition"
-                                    class="block text-sm font-semibold text-slate-700 mb-2">Condition</label>
-                                <div class="flex gap-4 h-full items-center">
-                                    <label class="flex items-center cursor-pointer group">
-                                        <input type="radio" name="condition" value="new"
-                                            class="w-4 h-4 text-brand-600 focus:ring-brand-500 border-slate-300">
-                                        <span
-                                            class="ml-2 text-slate-600 group-hover:text-slate-900 transition-colors">New</span>
-                                    </label>
-                                    <label class="flex items-center cursor-pointer group">
-                                        <input type="radio" name="condition" value="used" checked
-                                            class="w-4 h-4 text-brand-600 focus:ring-brand-500 border-slate-300">
-                                        <span
-                                            class="ml-2 text-slate-600 group-hover:text-slate-900 transition-colors">Used
-                                            (Good)</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="notes" class="block text-sm font-semibold text-slate-700 mb-2">Additional
-                                Notes</label>
-                            <textarea id="notes" name="notes" rows="3"
-                                placeholder="Any specific details about the material..."
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:bg-white transition-all resize-none"></textarea>
-                        </div>
-
-                        <div class="pt-4">
-                            <button type="submit"
-                                class="w-full py-4 bg-brand-600 text-white font-bold rounded-xl shadow-lg shadow-brand-100 hover:bg-brand-700 hover:shadow-xl transition-all active:scale-[0.98]">
-                                Submit Donation
-                            </button>
-                            <p class="mt-4 text-center text-xs text-slate-400">
-                                * You will receive a confirmation email with a link to manage your response.
-                            </p>
-                        </div>
-                    </form>
+                    class="bg-gradient-to-br from-brand-600 to-brand-800 rounded-[3rem] p-12 sm:p-20 text-center text-white shadow-2xl shadow-brand-200/50">
+                    <h2 class="text-3xl sm:text-5xl font-black mb-8">رأيك يمنحنـا القـوة</h2>
+                    <p class="text-lg sm:text-xl text-brand-100 font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+                        نحن نسعى دائماً لتطوير مبادرة "تكاتف". سواء كنت متبرعاً كريماً أو مستفيداً من الموارد، مرئياتك
+                        تساعدنا في بناء مجتمع أكاديمي أفضل.
+                    </p>
+                    <button type="button" onclick="openFeedbackModal()"
+                        class="inline-flex items-center justify-center px-10 py-5 text-lg font-black text-brand-700 bg-white rounded-2xl shadow-xl hover:bg-brand-50 transition-all active:scale-95">
+                        اضغط هنا لمشاركتنا رأيك
+                    </button>
                 </div>
             </div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-full blur-3xl opacity-50"
+                aria-hidden="true"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-50 rounded-full blur-3xl opacity-50"
+                aria-hidden="true"></div>
         </section>
+    </main>
 
-        </footer>
+    <!-- Modals -->
 
+    <!-- Feedback Modal (Premium) -->
+    <div id="feedbackModal" class="fixed inset-0 z-[150] hidden overflow-hidden px-4 py-6 sm:px-0 flex items-center justify-center">
+        <div class="fixed inset-0 modal-overlay" onclick="closeFeedbackModal()"></div>
+
+        <div id="modalContainer"
+            class="relative mx-auto max-w-2xl w-full bg-white rounded-[3rem] shadow-elevated modal-container overflow-hidden flex flex-col max-h-[90vh]">
+            <!-- Close Button -->
+            <button type="button" onclick="closeFeedbackModal()"
+                class="absolute top-8 left-8 w-12 h-12 bg-slate-50 text-slate-400 hover:text-slate-600 rounded-full flex items-center justify-center transition-all z-30">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Tabs (Fixed at top of container) -->
+            <div class="flex border-b border-slate-100 bg-slate-50/50 shrink-0">
+                <button id="tabDonor" type="button" onclick="switchTab('donor')"
+                    class="flex-1 py-10 text-xl font-black text-brand-600 border-b-4 border-brand-600 transition-all">رأيك
+                    كمتبرع</button>
+                <button id="tabConsumer" type="button" onclick="switchTab('consumer')"
+                    class="flex-1 py-10 text-xl font-black text-slate-400 border-b-4 border-transparent transition-all">رأيك
+                    كمستفيد</button>
+            </div>
+
+            <!-- Scrollable Body -->
+            <div id="feedbackModalBody" class="p-10 sm:p-14 overflow-y-auto flex-1 custom-scrollbar">
+                <form id="feedbackForm" class="space-y-8" onsubmit="handleFeedbackSubmit(event)">
+                    <input type="hidden" id="feedbackType" name="type" value="donor">
+                    <div>
+                        <label for="fName" class="block text-sm font-bold text-slate-700 mb-3 ms-2">الاسم الكامل (اختياري)</label>
+                        <input type="text" id="fName" name="name" placeholder="أحمد علي" class="w-full premium-input h-14">
+                    </div>
+
+                    <!-- Donor Specific Fields -->
+                    <div id="donorFeedbackFields" class="space-y-8">
+                        <!-- Registration Ease -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">كيف تقيَم سهولة التسجيل في الاستمارة ؟</label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="registrationEase" value="easy" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">سهلة</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="registrationEase" value="medium" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">متوسطة</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="registrationEase" value="complex" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">معقدة</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Info Clarity -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">هل كانت المعلومات الخاصة بالتبرع واضحة بالنسبة لك؟</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="infoClarity" value="very_clear" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center">واضحة جداً</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="infoClarity" value="somewhat_clear" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center">واضحة إلى حدٍ ما</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="infoClarity" value="unclear" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center">غير واضحة</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Feeling -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">كيف تقيَم شعورك تجاه المبادرة أو المشاركة فيها ؟</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="feeling" value="very_positive" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-sm">إيجابي جداً</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="feeling" value="positive" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">إيجابي</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="feeling" value="normal" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">عادي</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="feeling" value="negative" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">سلبي</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Open Ended Questions -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="fPositives" class="block text-sm font-bold text-slate-700 mb-3 ms-2">ماهي أبرز الإيجابيات التي تراها في المبادرة ؟</label>
+                                <textarea id="fPositives" name="positives" rows="3" placeholder="أدخل مرئياتك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                            <div>
+                                <label for="fNegatives" class="block text-sm font-bold text-slate-700 mb-3 ms-2">ما هي السلبيات التي تراها في المبادرة ؟</label>
+                                <textarea id="fNegatives" name="negatives" rows="3" placeholder="أدخل مرئياتك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                            <div>
+                                <label for="fSuggestions" class="block text-sm font-bold text-slate-700 mb-3 ms-2">هل لديك إقتراح لتحسين تجربة المتبرعين في الوقت الحالي أو مستقبلًا؟</label>
+                                <textarea id="fSuggestions" name="suggestions" rows="3" placeholder="اكتب اقتراحك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beneficiary Specific Fields -->
+                    <div id="beneficiaryFeedbackFields" class="space-y-8 hidden">
+                        <!-- Got Resources -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">هل حصلت على المستلزمات الدراسية التي تحتاجها ؟</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="gotResources" value="yes" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">نعم</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="gotResources" value="no" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700">لا</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Data Ease Rating -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">تقيَمك لسهولة إيجاد البيانات</label>
+                            <div class="grid grid-cols-5 gap-2">
+                                <label class="relative flex items-center justify-center aspect-square bg-slate-50 rounded-xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-600 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="dataEase" value="1" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-white">1</span>
+                                </label>
+                                <label class="relative flex items-center justify-center aspect-square bg-slate-50 rounded-xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-600 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="dataEase" value="2" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-white">2</span>
+                                </label>
+                                <label class="relative flex items-center justify-center aspect-square bg-slate-50 rounded-xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-600 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="dataEase" value="3" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-white">3</span>
+                                </label>
+                                <label class="relative flex items-center justify-center aspect-square bg-slate-50 rounded-xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-600 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="dataEase" value="4" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-white">4</span>
+                                </label>
+                                <label class="relative flex items-center justify-center aspect-square bg-slate-50 rounded-xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-600 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="dataEase" value="5" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-white">5</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Coverage Rating -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-slate-700 ms-2">هل ترى أن المبادرة غطت إحتياجات الطلاب بشكل جيد ؟</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="coverage" value="yes" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center">نعم</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="coverage" value="somewhat" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center text-sm">إلى حدٍ ما</span>
+                                </label>
+                                <label class="relative flex items-center justify-center p-4 bg-slate-50 rounded-2xl border-2 border-transparent hover:border-brand-200 cursor-pointer transition-all has-[:checked]:bg-brand-50 has-[:checked]:border-brand-600 group">
+                                    <input type="radio" name="coverage" value="no" class="sr-only">
+                                    <span class="font-bold text-slate-600 group-has-[:checked]:text-brand-700 text-center">لا</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Open Ended Questions -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="beneficiaryPositives" class="block text-sm font-bold text-slate-700 mb-3 ms-2">ماهي أبرز الإيجابيات التي تراها في المبادرة ؟</label>
+                                <textarea id="beneficiaryPositives" name="beneficiaryPositives" rows="3" placeholder="أدخل مرئياتك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                            <div>
+                                <label for="beneficiaryNegatives" class="block text-sm font-bold text-slate-700 mb-3 ms-2">ما هي السلبيات التي تراها في المبادرة ؟</label>
+                                <textarea id="beneficiaryNegatives" name="beneficiaryNegatives" rows="3" placeholder="أدخل مرئياتك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                            <div>
+                                <label for="beneficiarySuggestions" class="block text-sm font-bold text-slate-700 mb-3 ms-2">هل لديك إقتراح لتحسين تجربة المستفيدين في الوقت الحالي أو مستقبلًا؟</label>
+                                <textarea id="beneficiarySuggestions" name="beneficiarySuggestions" rows="3" placeholder="اكتب اقتراحك هنا..." class="w-full premium-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="generalOpinionField">
+                        <label id="opinionLabel" for="fOpinion"
+                            class="block text-sm font-bold text-slate-700 mb-3 ms-2">كيف ساعدتك المواد التي حصلت عليها؟</label>
+                        <textarea id="fOpinion" name="opinion" rows="5" required placeholder="اكتب رأيك بصدق هنا..."
+                            class="w-full premium-textarea text-lg"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button type="submit" class="w-full py-6 btn-primary-premium text-xl rounded-2xl">إرسال رأيك
+                            للمبادرة</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-slate-900 pt-20 pb-10 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-3xl font-extrabold tracking-tight mb-6 inline-block">مبادرة <span
+                    class="text-brand-500">تكاتف</span></span>
+            <div class="w-20 h-1 bg-brand-600 mx-auto mb-8 rounded-full" aria-hidden="true"></div>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8 text-sm font-medium text-slate-400"
+                aria-label="Footer Navigation">
+                <a href="index.html" class="hover:text-white transition-colors">الرئيسية</a>
+                <a href="#about" class="hover:text-white transition-colors">عن المبادرة</a>
+                <a href="materials.html" class="hover:text-white transition-colors">المواد المتاحة</a>
+                <a href="contact.html" class="hover:text-white transition-colors">تواصل معنا</a>
+                <a href="privacy-policy.html" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+            </nav>
+            <p class="text-slate-500 text-sm mb-4">بناء مجتمع أكاديمي متضامن</p>
+            <p class="text-slate-600 text-xs tracking-wide">&copy; 2026 مبادرة تكاتف. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script src="main.js"></script>
 </body>
 
 </html>
