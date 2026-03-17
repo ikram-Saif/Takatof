@@ -3,14 +3,39 @@
  * Senior Engineering Standard Refactoring
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    TakatofApp.init();
-});
+// --- Global UI Helpers ---
 
+/**
+ * Mobile Menu Toggle
+ * Defined globally for immediate access via onclick
+ */
+window.toggleMobileMenu = function() {
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('menuIcon');
+    
+    if (!menu) return;
+    
+    // Toggle visibility
+    const isHidden = menu.classList.toggle('hidden');
+    
+    // Toggle Icon (Hamburger vs Close)
+    if (icon) {
+        if (!isHidden) {
+            // Show Close Icon (X)
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        } else {
+            // Show Hamburger Icon
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+        }
+    }
+};
+
+/**
+ * TakatofApp - Core Application Module
+ */
 const TakatofApp = (() => {
     // --- State & Selectors ---
     const state = {
-        isFeedbackModalOpen: false,
         isFeedbackModalOpen: false,
         activeFeedbackTab: 'donor'
     };
@@ -18,7 +43,6 @@ const TakatofApp = (() => {
     const selectors = {
         counters: '.counter',
         feedbackModal: '#feedbackModal',
-        feedbackModalContainer: '#modalContainer',
         feedbackModalContainer: '#modalContainer',
         feedbackForm: '#feedbackForm',
         feedbackTypeInput: '#feedbackType',
@@ -31,11 +55,8 @@ const TakatofApp = (() => {
         feedbackModalBody: '#feedbackModalBody'
     };
 
-    // --- Core Modules ---
+    // --- Core Controllers ---
 
-    /**
-     * Stats Controller: Handles counter animations
-     */
     const StatsController = {
         init() {
             const statsSection = document.querySelector(selectors.counters)?.closest('section');
@@ -76,9 +97,6 @@ const TakatofApp = (() => {
         }
     };
 
-    /**
-     * Modal Controller: Handles UI state and transitions for modals
-     */
     const ModalController = {
         toggleModal(modalSelector, containerSelector, isOpen) {
             const modal = document.querySelector(modalSelector);
@@ -94,7 +112,6 @@ const TakatofApp = (() => {
                 setTimeout(() => {
                     modal.classList.add('hidden');
                     document.body.style.overflow = '';
-                    // Reset animations for next open
                     container.style.animation = '';
                     modal.querySelector('.modal-overlay').style.animation = '';
                 }, 200);
@@ -105,15 +122,13 @@ const TakatofApp = (() => {
             state.activeFeedbackTab = type;
             const tabDonor = document.querySelector(selectors.tabDonor);
             const tabConsumer = document.querySelector(selectors.tabConsumer);
-            const label = document.querySelector(selectors.opinionLabel);
             const typeInput = document.querySelector(selectors.feedbackTypeInput);
-
-            typeInput.value = type;
-
-            const opinionTextarea = document.querySelector('#fOpinion');
             const modalBody = document.querySelector(selectors.feedbackModalBody);
 
+            if (typeInput) typeInput.value = type;
             if (modalBody) modalBody.scrollTop = 0;
+
+            const opinionTextarea = document.querySelector('#fOpinion');
 
             if (type === 'donor') {
                 this._setTabActive(tabDonor, tabConsumer);
@@ -131,6 +146,7 @@ const TakatofApp = (() => {
         },
 
         _setTabActive(activeEl, inactiveEl) {
+            if (!activeEl || !inactiveEl) return;
             activeEl.classList.add('text-brand-600', 'border-brand-600');
             activeEl.classList.remove('text-slate-400', 'border-transparent');
             inactiveEl.classList.remove('text-brand-600', 'border-brand-600');
@@ -138,9 +154,6 @@ const TakatofApp = (() => {
         }
     };
 
-    /**
-     * Form Controller: Handles submission and basic validation
-     */
     const FormController = {
         handleFeedback(e) {
             e.preventDefault();
@@ -149,8 +162,7 @@ const TakatofApp = (() => {
             alert('شكراً لك على مشاركتنا رأيك! تم استلام رسالتك بنجاح.');
             TakatofApp.closeFeedbackModal();
             e.target.reset();
-        },
-
+        }
     };
 
     // --- Public API ---
@@ -158,8 +170,6 @@ const TakatofApp = (() => {
         init() {
             StatsController.init();
         },
-
-        // Feedback Modal
         openFeedbackModal() {
             ModalController.toggleModal(selectors.feedbackModal, selectors.feedbackModalContainer, true);
             ModalController.switchFeedbackTab('donor');
@@ -172,12 +182,17 @@ const TakatofApp = (() => {
         },
         handleFeedbackSubmit(e) {
             FormController.handleFeedback(e);
-        },
-
+        }
     };
 })();
 
-// Global hooks for HTML onclick/onsubmit (since they were requested/used)
+// --- Event Listeners & Global Hooks ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    TakatofApp.init();
+});
+
+// Backward compatibility hooks
 window.openFeedbackModal = () => TakatofApp.openFeedbackModal();
 window.closeFeedbackModal = () => TakatofApp.closeFeedbackModal();
 window.switchTab = (type) => TakatofApp.switchTab(type);

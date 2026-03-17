@@ -68,11 +68,25 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button type="button" class="text-slate-600 p-2 rounded-lg hover:bg-slate-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="mobileMenuBtn" type="button" onclick="toggleMobileMenu()" class="text-slate-600 p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 animate-fadeDown overflow-hidden">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-base font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-all">الرئيسية</a>
+                <a href="materials.html" class="block px-4 py-3 text-base font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-all">المواد المتاحة</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-all">تواصل معنا</a>
+                <div class="pt-4 px-4">
+                    <a href="materials.html?openModal=add" class="block w-full py-4 text-center font-bold text-white bg-brand-600 rounded-xl shadow-md active:scale-95 transition-all">
+                        تبرع الآن
+                    </a>
                 </div>
             </div>
         </div>
@@ -162,6 +176,8 @@
         </div>
     </footer>
 
+    <!-- Core Scripts -->
+    <script src="main.js"></script>
 </body>
 
 </html>

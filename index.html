@@ -71,11 +71,25 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button type="button" class="text-slate-600 p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button id="mobileMenuBtn" type="button" onclick="toggleMobileMenu()" class="text-slate-600 p-2 rounded-lg hover:bg-slate-100" aria-label="Open menu">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 animate-fadeDown overflow-hidden">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-base font-bold text-brand-600 bg-brand-50 rounded-xl">الرئيسية</a>
+                <a href="materials.html" class="block px-4 py-3 text-base font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-all">المواد المتاحة</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-all">تواصل معنا</a>
+                <div class="pt-4 px-4">
+                    <a href="materials.html?openModal=add" class="block w-full py-4 text-center font-bold text-white bg-brand-600 rounded-xl shadow-md active:scale-95 transition-all">
+                        تبرع الآن
+                    </a>
                 </div>
             </div>
         </div>
@@ -272,14 +286,14 @@
     <!-- Modals -->
 
     <!-- Feedback Modal (Premium) -->
-    <div id="feedbackModal" class="fixed inset-0 z-[150] hidden overflow-hidden px-4 py-6 sm:px-0 flex items-center justify-center">
+    <div id="feedbackModal" class="fixed inset-0 z-[150] hidden overflow-hidden px-4 md:px-0 flex items-center justify-center">
         <div class="fixed inset-0 modal-overlay" onclick="closeFeedbackModal()"></div>
 
         <div id="modalContainer"
-            class="relative mx-auto max-w-2xl w-full bg-white rounded-[3rem] shadow-elevated modal-container overflow-hidden flex flex-col max-h-[90vh]">
+            class="relative mx-auto max-w-2xl w-full bg-white rounded-[2rem] sm:rounded-[3rem] shadow-elevated modal-container overflow-hidden flex flex-col max-h-[90vh]">
             <!-- Close Button -->
             <button type="button" onclick="closeFeedbackModal()"
-                class="absolute top-8 left-8 w-12 h-12 bg-slate-50 text-slate-400 hover:text-slate-600 rounded-full flex items-center justify-center transition-all z-30">
+                class="absolute top-6 left-6 sm:top-8 sm:left-8 w-12 h-12 bg-slate-50 text-slate-400 hover:text-slate-600 rounded-full flex items-center justify-center transition-all z-30">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -288,15 +302,15 @@
             <!-- Tabs (Fixed at top of container) -->
             <div class="flex border-b border-slate-100 bg-slate-50/50 shrink-0">
                 <button id="tabDonor" type="button" onclick="switchTab('donor')"
-                    class="flex-1 py-10 text-xl font-black text-brand-600 border-b-4 border-brand-600 transition-all">رأيك
+                    class="flex-1 py-6 sm:py-10 text-lg sm:text-xl font-black text-brand-600 border-b-4 border-brand-600 transition-all">رأيك
                     كمتبرع</button>
                 <button id="tabConsumer" type="button" onclick="switchTab('consumer')"
-                    class="flex-1 py-10 text-xl font-black text-slate-400 border-b-4 border-transparent transition-all">رأيك
+                    class="flex-1 py-6 sm:py-10 text-lg sm:text-xl font-black text-slate-400 border-b-4 border-transparent transition-all">رأيك
                     كمستفيد</button>
             </div>
 
             <!-- Scrollable Body -->
-            <div id="feedbackModalBody" class="p-10 sm:p-14 overflow-y-auto flex-1 custom-scrollbar">
+            <div id="feedbackModalBody" class="p-6 sm:p-14 overflow-y-auto flex-1 custom-scrollbar">
                 <form id="feedbackForm" class="space-y-8" onsubmit="handleFeedbackSubmit(event)">
                     <input type="hidden" id="feedbackType" name="type" value="donor">
                     <div>
